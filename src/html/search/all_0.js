@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f_5finit_5f_5f',['__init__',['../classRecognitionFactory_1_1dLib.html#a7bb73498790a1728080d244b168708da',1,'RecognitionFactory.dLib.__init__()'],['../classRecognitionFactory_1_1OpenFace.html#af5f05c3d9119fa84eebe93af73294b71',1,'RecognitionFactory.OpenFace.__init__()']]]
+  ['blink_5feyes',['blink_eyes',['../classDetectionFactory_1_1dLib.html#a52deb7c6b98fe94459c6521b876b0db9',1,'DetectionFactory.dLib.blink_eyes()'],['../classDetectionFactory_1_1MTCNN.html#a879b84b1ec40bdd68775e7f2368bb856',1,'DetectionFactory.MTCNN.blink_eyes()']]]
 ];

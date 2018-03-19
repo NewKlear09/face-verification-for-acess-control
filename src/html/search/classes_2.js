@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openface',['OpenFace',['../classRecognitionFactory_1_1OpenFace.html',1,'RecognitionFactory']]]
+  ['mtcnn',['MTCNN',['../classDetectionFactory_1_1MTCNN.html',1,'DetectionFactory']]]
 ];

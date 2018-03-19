@@ -1,0 +1,63 @@
+\hypertarget{namespacedetect__face}{}\section{detect\+\_\+face Namespace Reference}
+\label{namespacedetect__face}\index{detect\+\_\+face@{detect\+\_\+face}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classdetect__face_1_1Network}{Network}
+\item 
+class \hyperlink{classdetect__face_1_1ONet}{O\+Net}
+\item 
+class \hyperlink{classdetect__face_1_1PNet}{P\+Net}
+\item 
+class \hyperlink{classdetect__face_1_1RNet}{R\+Net}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacedetect__face_a56206197555d7b54d5f27c410d814268}{layer} (op)
+\item 
+def {\bfseries create\+\_\+mtcnn} (sess, model\+\_\+path)\hypertarget{namespacedetect__face_a9a159b63bb8dfd9836c1a5a401d82acc}{}\label{namespacedetect__face_a9a159b63bb8dfd9836c1a5a401d82acc}
+
+\item 
+def {\bfseries detect\+\_\+face} (img, minsize, pnet, rnet, onet, threshold, factor)\hypertarget{namespacedetect__face_a114ff784601bf295b09cbda8e43c1f40}{}\label{namespacedetect__face_a114ff784601bf295b09cbda8e43c1f40}
+
+\item 
+def {\bfseries bulk\+\_\+detect\+\_\+face} (images, detection\+\_\+window\+\_\+size\+\_\+ratio, pnet, rnet, onet, threshold, factor)\hypertarget{namespacedetect__face_a03662ace7b5ad080897d8fad2213e2ea}{}\label{namespacedetect__face_a03662ace7b5ad080897d8fad2213e2ea}
+
+\item 
+def {\bfseries bbreg} (boundingbox, reg)\hypertarget{namespacedetect__face_a8d2a300cd87264905d5edd788c4d1a35}{}\label{namespacedetect__face_a8d2a300cd87264905d5edd788c4d1a35}
+
+\item 
+def {\bfseries generate\+Bounding\+Box} (imap, reg, scale, t)\hypertarget{namespacedetect__face_a1fd06dbdc98718c9e9e05636c22864ce}{}\label{namespacedetect__face_a1fd06dbdc98718c9e9e05636c22864ce}
+
+\item 
+def {\bfseries nms} (boxes, threshold, method)\hypertarget{namespacedetect__face_a2e44d4e2710d931d974bbfc4237e5964}{}\label{namespacedetect__face_a2e44d4e2710d931d974bbfc4237e5964}
+
+\item 
+def {\bfseries pad} (total\+\_\+boxes, w, h)\hypertarget{namespacedetect__face_adb76cb941cd3edc02296995e3d0759ca}{}\label{namespacedetect__face_adb76cb941cd3edc02296995e3d0759ca}
+
+\item 
+def {\bfseries rerec} (bboxA)\hypertarget{namespacedetect__face_acfe26effdb21d6424211964e67974e2c}{}\label{namespacedetect__face_acfe26effdb21d6424211964e67974e2c}
+
+\item 
+def {\bfseries imresample} (img, sz)\hypertarget{namespacedetect__face_ad0751aa76758f14c208ff91a53a90b9a}{}\label{namespacedetect__face_ad0751aa76758f14c208ff91a53a90b9a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Tensorflow implementation of the face detection / alignment algorithm found at
+https://github.com/kpzhang93/MTCNN_face_detection_alignment
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{detect\+\_\+face@{detect\+\_\+face}!layer@{layer}}
+\index{layer@{layer}!detect\+\_\+face@{detect\+\_\+face}}
+\subsubsection[{\texorpdfstring{layer(op)}{layer(op)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+layer (
+\begin{DoxyParamCaption}
+\item[{}]{op}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacedetect__face_a56206197555d7b54d5f27c410d814268}{}\label{namespacedetect__face_a56206197555d7b54d5f27c410d814268}
+\begin{DoxyVerb}Decorator for composable network layers.\end{DoxyVerb}
+ 

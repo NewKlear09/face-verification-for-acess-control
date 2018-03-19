@@ -1,34 +1,44 @@
-\hypertarget{namespaceverification__server}{\section{verification\-\_\-server Namespace Reference}
-\label{namespaceverification__server}\index{verification\-\_\-server@{verification\-\_\-server}}
-}
+\hypertarget{namespaceverification__server}{}\section{verification\+\_\+server Namespace Reference}
+\label{namespaceverification__server}\index{verification\+\_\+server@{verification\+\_\+server}}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{namespaceverification__server_aa0dccdc3f03c989218ef40e03d79e60f}{recvall}
+def \hyperlink{namespaceverification__server_a3511e2a2145fd413ad59827fdaa08e3f}{recvall} (sock, count)
 \begin{DoxyCompactList}\small\item\em Function that will convert the socket received into a string. \end{DoxyCompactList}\item 
-def \hyperlink{namespaceverification__server_a5b96ff950d3272c3a55454ff66655764}{calc\-\_\-store\-\_\-face\-\_\-descriptors}
+def \hyperlink{namespaceverification__server_a1538ab2d39ce70cfce2373fe1afd932d}{calc\+\_\+store\+\_\+face\+\_\+descriptors} (img, bb)
 \begin{DoxyCompactList}\small\item\em Calculates a face descriptor and appends it with others already calculated into a list. \end{DoxyCompactList}\item 
-def \hyperlink{namespaceverification__server_af845c1ab5a3c1014b13066b988f6aee3}{store\-\_\-face\-\_\-descriptors}
+def \hyperlink{namespaceverification__server_ab767e1cd7d607d8fb77beabdd322397f}{store\+\_\+face\+\_\+descriptors} (face\+\_\+descriptor1)
 \begin{DoxyCompactList}\small\item\em It will append the face descriptor received into a list. \end{DoxyCompactList}\item 
-def \hyperlink{namespaceverification__server_a44157a0a320f3a705bcfce8157db3d45}{load\-\_\-vectors\-\_\-from\-\_\-folder}
+def \hyperlink{namespaceverification__server_ac0248c1ac07d115bcbf7667409a4bab9}{store\+\_\+face\+\_\+descriptors\+\_\+folder} (face\+\_\+descriptor, folder\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Stores the face descriptors received into a folder (already created or not). \end{DoxyCompactList}\item 
+def \hyperlink{namespaceverification__server_abdd5fe10279e77d0db7f072fb9b5d5ed}{load\+\_\+descriptors\+\_\+from\+\_\+folder} (folder)
 \begin{DoxyCompactList}\small\item\em It will load the descriptors that are on a specific folder into a desciptors list. \end{DoxyCompactList}\item 
-def \hyperlink{namespaceverification__server_a03ca32aaae518a847244d85a923a932b}{comparision\-\_\-vectors}
+def \hyperlink{namespaceverification__server_a5078e642441c12c9a89aa78e6c5974a7}{load\+\_\+and\+\_\+compare\+\_\+descriptors} (person\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Function that will check if everything is ready for the comparision process. \end{DoxyCompactList}\item 
-def \hyperlink{namespaceverification__server_a0a5e06d754b96bbd99a8abb3ac8aebf5}{compare\-\_\-descriptors}
+def \hyperlink{namespaceverification__server_aca7965407a96b52124a620758241d0df}{compare\+\_\+descriptors} (descriptors\+\_\+saved)
 \begin{DoxyCompactList}\small\item\em Function that does an average of the similarity values calculated with the face descriptors. \end{DoxyCompactList}\item 
-\hypertarget{namespaceverification__server_a2627b9152fdabc83485cb774e1bf7494}{def {\bfseries main}}\label{namespaceverification__server_a2627b9152fdabc83485cb774e1bf7494}
+def {\bfseries main} ()\hypertarget{namespaceverification__server_afda6c69ace67afd112218d39c890f83b}{}\label{namespaceverification__server_afda6c69ace67afd112218d39c890f83b}
 
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{namespaceverification__server_a9afac50475b83368738162e5936a1a23}{list {\bfseries descriptor\-\_\-values} = \mbox{[}$\,$\mbox{]}}\label{namespaceverification__server_a9afac50475b83368738162e5936a1a23}
+list {\bfseries descriptor\+\_\+values} = \mbox{[}$\,$\mbox{]}\hypertarget{namespaceverification__server_a9afac50475b83368738162e5936a1a23}{}\label{namespaceverification__server_a9afac50475b83368738162e5936a1a23}
 
 \item 
-\hypertarget{namespaceverification__server_ad884dc0ccc20d93e94aa6d6e3f94c074}{string {\bfseries T\-C\-P\-\_\-\-I\-P} = 'localhost'}\label{namespaceverification__server_ad884dc0ccc20d93e94aa6d6e3f94c074}
+string {\bfseries folder\+\_\+aux} = \char`\"{} \char`\"{}\hypertarget{namespaceverification__server_ae644e6d5e2a3b0e7f51d19aab7d1b325}{}\label{namespaceverification__server_ae644e6d5e2a3b0e7f51d19aab7d1b325}
 
 \item 
-\hypertarget{namespaceverification__server_a76565f2723c68f981534575e6e46754a}{int {\bfseries T\-C\-P\-\_\-\-P\-O\-R\-T} = 8000}\label{namespaceverification__server_a76565f2723c68f981534575e6e46754a}
+int {\bfseries i} = 0\hypertarget{namespaceverification__server_a37d55345204dd8a2ed29eb734b296f6c}{}\label{namespaceverification__server_a37d55345204dd8a2ed29eb734b296f6c}
+
+\item 
+string {\bfseries T\+C\+P\+\_\+\+IP} = \textquotesingle{}localhost\textquotesingle{}\hypertarget{namespaceverification__server_ad884dc0ccc20d93e94aa6d6e3f94c074}{}\label{namespaceverification__server_ad884dc0ccc20d93e94aa6d6e3f94c074}
+
+\item 
+int {\bfseries T\+C\+P\+\_\+\+P\+O\+RT} = 8000\hypertarget{namespaceverification__server_a76565f2723c68f981534575e6e46754a}{}\label{namespaceverification__server_a76565f2723c68f981534575e6e46754a}
+
+\item 
+{\bfseries file} = open(\char`\"{}../../logsverification\+\_\+values.\+txt\char`\"{}, \char`\"{}a\char`\"{})\hypertarget{namespaceverification__server_a9147b70e84ba7bbe7addfcdd51f4c0cf}{}\label{namespaceverification__server_a9147b70e84ba7bbe7addfcdd51f4c0cf}
 
 \end{DoxyCompactItemize}
 
@@ -40,14 +50,14 @@ This comparision will give a value: the lower the value the more likely it is th
  
 
 \subsection{Function Documentation}
-\hypertarget{namespaceverification__server_a5b96ff950d3272c3a55454ff66655764}{\index{verification\-\_\-server@{verification\-\_\-server}!calc\-\_\-store\-\_\-face\-\_\-descriptors@{calc\-\_\-store\-\_\-face\-\_\-descriptors}}
-\index{calc\-\_\-store\-\_\-face\-\_\-descriptors@{calc\-\_\-store\-\_\-face\-\_\-descriptors}!verification_server@{verification\-\_\-server}}
-\subsubsection[{calc\-\_\-store\-\_\-face\-\_\-descriptors}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-calc\-\_\-store\-\_\-face\-\_\-descriptors (
+\index{verification\+\_\+server@{verification\+\_\+server}!calc\+\_\+store\+\_\+face\+\_\+descriptors@{calc\+\_\+store\+\_\+face\+\_\+descriptors}}
+\index{calc\+\_\+store\+\_\+face\+\_\+descriptors@{calc\+\_\+store\+\_\+face\+\_\+descriptors}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{calc\+\_\+store\+\_\+face\+\_\+descriptors(img, bb)}{calc_store_face_descriptors(img, bb)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+calc\+\_\+store\+\_\+face\+\_\+descriptors (
 \begin{DoxyParamCaption}
 \item[{}]{img, }
 \item[{}]{bb}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_a5b96ff950d3272c3a55454ff66655764}
+)}\hypertarget{namespaceverification__server_a1538ab2d39ce70cfce2373fe1afd932d}{}\label{namespaceverification__server_a1538ab2d39ce70cfce2373fe1afd932d}
 
 
 Calculates a face descriptor and appends it with others already calculated into a list. 
@@ -59,20 +69,20 @@ Calculates a face descriptor and appends it with others already calculated into 
 {\em bb} & Bounding box of the biggest face \\
 \hline
 \end{DoxyParams}
-\hypertarget{namespaceverification__server_a0a5e06d754b96bbd99a8abb3ac8aebf5}{\index{verification\-\_\-server@{verification\-\_\-server}!compare\-\_\-descriptors@{compare\-\_\-descriptors}}
-\index{compare\-\_\-descriptors@{compare\-\_\-descriptors}!verification_server@{verification\-\_\-server}}
-\subsubsection[{compare\-\_\-descriptors}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-compare\-\_\-descriptors (
+\index{verification\+\_\+server@{verification\+\_\+server}!compare\+\_\+descriptors@{compare\+\_\+descriptors}}
+\index{compare\+\_\+descriptors@{compare\+\_\+descriptors}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{compare\+\_\+descriptors(descriptors\+\_\+saved)}{compare_descriptors(descriptors_saved)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+compare\+\_\+descriptors (
 \begin{DoxyParamCaption}
-\item[{}]{descriptors\-\_\-saved}
+\item[{}]{descriptors\+\_\+saved}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_a0a5e06d754b96bbd99a8abb3ac8aebf5}
+)}\hypertarget{namespaceverification__server_aca7965407a96b52124a620758241d0df}{}\label{namespaceverification__server_aca7965407a96b52124a620758241d0df}
 
 
 Function that does an average of the similarity values calculated with the face descriptors. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em descriptors\-\_\-saved} & The descriptors that are stored on a given folder.\\
+{\em descriptors\+\_\+saved} & The descriptors that are stored on a given folder.\\
 \hline
 \end{DoxyParams}
 
@@ -82,13 +92,13 @@ Function that does an average of the similarity values calculated with the face 
 {\em 1} & if the comparision was sucessfully made \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{namespaceverification__server_a03ca32aaae518a847244d85a923a932b}{\index{verification\-\_\-server@{verification\-\_\-server}!comparision\-\_\-vectors@{comparision\-\_\-vectors}}
-\index{comparision\-\_\-vectors@{comparision\-\_\-vectors}!verification_server@{verification\-\_\-server}}
-\subsubsection[{comparision\-\_\-vectors}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-comparision\-\_\-vectors (
+\index{verification\+\_\+server@{verification\+\_\+server}!load\+\_\+and\+\_\+compare\+\_\+descriptors@{load\+\_\+and\+\_\+compare\+\_\+descriptors}}
+\index{load\+\_\+and\+\_\+compare\+\_\+descriptors@{load\+\_\+and\+\_\+compare\+\_\+descriptors}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{load\+\_\+and\+\_\+compare\+\_\+descriptors(person\+\_\+name)}{load_and_compare_descriptors(person_name)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+load\+\_\+and\+\_\+compare\+\_\+descriptors (
 \begin{DoxyParamCaption}
-\item[{}]{person\-\_\-name}
+\item[{}]{person\+\_\+name}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_a03ca32aaae518a847244d85a923a932b}
+)}\hypertarget{namespaceverification__server_a5078e642441c12c9a89aa78e6c5974a7}{}\label{namespaceverification__server_a5078e642441c12c9a89aa78e6c5974a7}
 
 
 Function that will check if everything is ready for the comparision process. 
@@ -97,7 +107,7 @@ It will search if there is face descriptors received by the socket function read
 
 
 \begin{DoxyParams}{Parameters}
-{\em person\-\_\-name} & String with the name of the folder where the desciptors are.\\
+{\em person\+\_\+name} & String with the name of the folder where the desciptors are.\\
 \hline
 \end{DoxyParams}
 
@@ -109,13 +119,13 @@ It will search if there is face descriptors received by the socket function read
 {\em 1} & if the comparision was sucessfully made \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{namespaceverification__server_a44157a0a320f3a705bcfce8157db3d45}{\index{verification\-\_\-server@{verification\-\_\-server}!load\-\_\-vectors\-\_\-from\-\_\-folder@{load\-\_\-vectors\-\_\-from\-\_\-folder}}
-\index{load\-\_\-vectors\-\_\-from\-\_\-folder@{load\-\_\-vectors\-\_\-from\-\_\-folder}!verification_server@{verification\-\_\-server}}
-\subsubsection[{load\-\_\-vectors\-\_\-from\-\_\-folder}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-load\-\_\-vectors\-\_\-from\-\_\-folder (
+\index{verification\+\_\+server@{verification\+\_\+server}!load\+\_\+descriptors\+\_\+from\+\_\+folder@{load\+\_\+descriptors\+\_\+from\+\_\+folder}}
+\index{load\+\_\+descriptors\+\_\+from\+\_\+folder@{load\+\_\+descriptors\+\_\+from\+\_\+folder}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{load\+\_\+descriptors\+\_\+from\+\_\+folder(folder)}{load_descriptors_from_folder(folder)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+load\+\_\+descriptors\+\_\+from\+\_\+folder (
 \begin{DoxyParamCaption}
 \item[{}]{folder}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_a44157a0a320f3a705bcfce8157db3d45}
+)}\hypertarget{namespaceverification__server_abdd5fe10279e77d0db7f072fb9b5d5ed}{}\label{namespaceverification__server_abdd5fe10279e77d0db7f072fb9b5d5ed}
 
 
 It will load the descriptors that are on a specific folder into a desciptors list. 
@@ -125,14 +135,14 @@ It will load the descriptors that are on a specific folder into a desciptors lis
 {\em folder} & Folder path \\
 \hline
 \end{DoxyParams}
-\hypertarget{namespaceverification__server_aa0dccdc3f03c989218ef40e03d79e60f}{\index{verification\-\_\-server@{verification\-\_\-server}!recvall@{recvall}}
-\index{recvall@{recvall}!verification_server@{verification\-\_\-server}}
-\subsubsection[{recvall}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-recvall (
+\index{verification\+\_\+server@{verification\+\_\+server}!recvall@{recvall}}
+\index{recvall@{recvall}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{recvall(sock, count)}{recvall(sock, count)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+recvall (
 \begin{DoxyParamCaption}
 \item[{}]{sock, }
 \item[{}]{count}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_aa0dccdc3f03c989218ef40e03d79e60f}
+)}\hypertarget{namespaceverification__server_a3511e2a2145fd413ad59827fdaa08e3f}{}\label{namespaceverification__server_a3511e2a2145fd413ad59827fdaa08e3f}
 
 
 Function that will convert the socket received into a string. 
@@ -149,13 +159,13 @@ Function that will convert the socket received into a string.
 {\em String} & Socket Information \\
 \hline
 \end{DoxyRetVals}
-\hypertarget{namespaceverification__server_af845c1ab5a3c1014b13066b988f6aee3}{\index{verification\-\_\-server@{verification\-\_\-server}!store\-\_\-face\-\_\-descriptors@{store\-\_\-face\-\_\-descriptors}}
-\index{store\-\_\-face\-\_\-descriptors@{store\-\_\-face\-\_\-descriptors}!verification_server@{verification\-\_\-server}}
-\subsubsection[{store\-\_\-face\-\_\-descriptors}]{\setlength{\rightskip}{0pt plus 5cm}def verification\-\_\-server.\-store\-\_\-face\-\_\-descriptors (
+\index{verification\+\_\+server@{verification\+\_\+server}!store\+\_\+face\+\_\+descriptors@{store\+\_\+face\+\_\+descriptors}}
+\index{store\+\_\+face\+\_\+descriptors@{store\+\_\+face\+\_\+descriptors}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{store\+\_\+face\+\_\+descriptors(face\+\_\+descriptor1)}{store_face_descriptors(face_descriptor1)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+store\+\_\+face\+\_\+descriptors (
 \begin{DoxyParamCaption}
-\item[{}]{face\-\_\-descriptor1}
+\item[{}]{face\+\_\+descriptor1}
 \end{DoxyParamCaption}
-)}}\label{namespaceverification__server_af845c1ab5a3c1014b13066b988f6aee3}
+)}\hypertarget{namespaceverification__server_ab767e1cd7d607d8fb77beabdd322397f}{}\label{namespaceverification__server_ab767e1cd7d607d8fb77beabdd322397f}
 
 
 It will append the face descriptor received into a list. 
@@ -164,6 +174,25 @@ If the list is full, the least recent descriptor will be deleted.
 
 
 \begin{DoxyParams}{Parameters}
-{\em face\-\_\-descriptor1} & Face descrpitor \\
+{\em face\+\_\+descriptor1} & Face descrpitor \\
+\hline
+\end{DoxyParams}
+\index{verification\+\_\+server@{verification\+\_\+server}!store\+\_\+face\+\_\+descriptors\+\_\+folder@{store\+\_\+face\+\_\+descriptors\+\_\+folder}}
+\index{store\+\_\+face\+\_\+descriptors\+\_\+folder@{store\+\_\+face\+\_\+descriptors\+\_\+folder}!verification\+\_\+server@{verification\+\_\+server}}
+\subsubsection[{\texorpdfstring{store\+\_\+face\+\_\+descriptors\+\_\+folder(face\+\_\+descriptor, folder\+\_\+name)}{store_face_descriptors_folder(face_descriptor, folder_name)}}]{\setlength{\rightskip}{0pt plus 5cm}def verification\+\_\+server.\+store\+\_\+face\+\_\+descriptors\+\_\+folder (
+\begin{DoxyParamCaption}
+\item[{}]{face\+\_\+descriptor, }
+\item[{}]{folder\+\_\+name}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceverification__server_ac0248c1ac07d115bcbf7667409a4bab9}{}\label{namespaceverification__server_ac0248c1ac07d115bcbf7667409a4bab9}
+
+
+Stores the face descriptors received into a folder (already created or not). 
+
+5 descriptors for each person.
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\+\_\+descriptor} & The face descriptor \\
 \hline
 \end{DoxyParams}

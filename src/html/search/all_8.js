@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nfc_5farduino',['NFC_Arduino',['../namespaceNFC__Arduino.html',1,'']]],
-  ['normal_5frecord',['normal_record',['../namespaceregister__facetracker.html#a1c32488635611f9517c049fa7fc94b88',1,'register_facetracker']]]
+  ['network',['Network',['../classdetect__face_1_1Network.html',1,'detect_face']]],
+  ['nfc_5farduino',['NFC_Arduino',['../namespaceNFC__Arduino.html',1,'']]]
 ];

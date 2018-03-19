@@ -1,0 +1,138 @@
+\hypertarget{classdetect__face_1_1Network}{}\section{detect\+\_\+face.\+Network Class Reference}
+\label{classdetect__face_1_1Network}\index{detect\+\_\+face.\+Network@{detect\+\_\+face.\+Network}}
+Inheritance diagram for detect\+\_\+face.\+Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classdetect__face_1_1Network}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, inputs, trainable=True)\hypertarget{classdetect__face_1_1Network_a69f8b4b309d9f5402ccb86f73a34d807}{}\label{classdetect__face_1_1Network_a69f8b4b309d9f5402ccb86f73a34d807}
+
+\item 
+def \hyperlink{classdetect__face_1_1Network_ac19da11c9d5136399bee1c5b2468be79}{setup} (self)
+\item 
+def \hyperlink{classdetect__face_1_1Network_a26cf4112c7a92cc8d03e74e690c6831d}{load} (self, data\+\_\+path, session, ignore\+\_\+missing=False)
+\item 
+def \hyperlink{classdetect__face_1_1Network_a810da0416a4cd84e83015d89131d4389}{feed} (self, args)
+\item 
+def \hyperlink{classdetect__face_1_1Network_a4a6eb7a13da3620697a64f7a974242e8}{get\+\_\+output} (self)
+\item 
+def \hyperlink{classdetect__face_1_1Network_aa6ee08c64a7f8a75ac13a485a8ed3374}{get\+\_\+unique\+\_\+name} (self, prefix)
+\item 
+def \hyperlink{classdetect__face_1_1Network_a4ee4b07dc43c4092f4c1b63d89296057}{make\+\_\+var} (self, name, shape)
+\item 
+def \hyperlink{classdetect__face_1_1Network_a8f407ab687e3a91324e0b54b9011672a}{validate\+\_\+padding} (self, padding)
+\item 
+def {\bfseries conv} (self, inp, k\+\_\+h, k\+\_\+w, c\+\_\+o, s\+\_\+h, s\+\_\+w, name, relu=True, padding=\textquotesingle{}S\+A\+ME\textquotesingle{}, group=1, biased=True)\hypertarget{classdetect__face_1_1Network_a3f5730dec069754ebd608eedf81669ed}{}\label{classdetect__face_1_1Network_a3f5730dec069754ebd608eedf81669ed}
+
+\item 
+def {\bfseries prelu} (self, inp, name)\hypertarget{classdetect__face_1_1Network_a6ab3ca1c0884bacf4bc4fd608ed766fd}{}\label{classdetect__face_1_1Network_a6ab3ca1c0884bacf4bc4fd608ed766fd}
+
+\item 
+def {\bfseries max\+\_\+pool} (self, inp, k\+\_\+h, k\+\_\+w, s\+\_\+h, s\+\_\+w, name, padding=\textquotesingle{}S\+A\+ME\textquotesingle{})\hypertarget{classdetect__face_1_1Network_a1ef26550a38cce16c26d5b8858a6864f}{}\label{classdetect__face_1_1Network_a1ef26550a38cce16c26d5b8858a6864f}
+
+\item 
+def {\bfseries fc} (self, inp, num\+\_\+out, name, relu=True)\hypertarget{classdetect__face_1_1Network_a5450f5698fd15318d12dbd18b4b9ef72}{}\label{classdetect__face_1_1Network_a5450f5698fd15318d12dbd18b4b9ef72}
+
+\item 
+def {\bfseries softmax} (self, target, axis, name=None)\hypertarget{classdetect__face_1_1Network_a7376e5641477584f8819d5d9e5043eb8}{}\label{classdetect__face_1_1Network_a7376e5641477584f8819d5d9e5043eb8}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries inputs}\hypertarget{classdetect__face_1_1Network_a869d691efce01f7d4d70f159a93a1f90}{}\label{classdetect__face_1_1Network_a869d691efce01f7d4d70f159a93a1f90}
+
+\item 
+{\bfseries terminals}\hypertarget{classdetect__face_1_1Network_a827c4a5dbba9486bbbe439cf66b200db}{}\label{classdetect__face_1_1Network_a827c4a5dbba9486bbbe439cf66b200db}
+
+\item 
+{\bfseries layers}\hypertarget{classdetect__face_1_1Network_ae6cf34012bc82d05b239ead904527aeb}{}\label{classdetect__face_1_1Network_ae6cf34012bc82d05b239ead904527aeb}
+
+\item 
+{\bfseries trainable}\hypertarget{classdetect__face_1_1Network_a9f44e04ca2ba3fd708e28c1d1d340350}{}\label{classdetect__face_1_1Network_a9f44e04ca2ba3fd708e28c1d1d340350}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!feed@{feed}}
+\index{feed@{feed}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{feed(self, args)}{feed(self, args)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+feed (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_a810da0416a4cd84e83015d89131d4389}{}\label{classdetect__face_1_1Network_a810da0416a4cd84e83015d89131d4389}
+\begin{DoxyVerb}Set the input(s) for the next operation by replacing the terminal nodes.
+The arguments can be either layer names or the actual layers.
+\end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!get\+\_\+output@{get\+\_\+output}}
+\index{get\+\_\+output@{get\+\_\+output}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{get\+\_\+output(self)}{get_output(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+get\+\_\+output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_a4a6eb7a13da3620697a64f7a974242e8}{}\label{classdetect__face_1_1Network_a4a6eb7a13da3620697a64f7a974242e8}
+\begin{DoxyVerb}Returns the current network output.\end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!get\+\_\+unique\+\_\+name@{get\+\_\+unique\+\_\+name}}
+\index{get\+\_\+unique\+\_\+name@{get\+\_\+unique\+\_\+name}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{get\+\_\+unique\+\_\+name(self, prefix)}{get_unique_name(self, prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+get\+\_\+unique\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_aa6ee08c64a7f8a75ac13a485a8ed3374}{}\label{classdetect__face_1_1Network_aa6ee08c64a7f8a75ac13a485a8ed3374}
+\begin{DoxyVerb}Returns an index-suffixed unique name for the given prefix.
+This is used for auto-generating layer names based on the type-prefix.
+\end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!load@{load}}
+\index{load@{load}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{load(self, data\+\_\+path, session, ignore\+\_\+missing=\+False)}{load(self, data_path, session, ignore_missing=False)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+load (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{data\+\_\+path, }
+\item[{}]{session, }
+\item[{}]{ignore\+\_\+missing = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_a26cf4112c7a92cc8d03e74e690c6831d}{}\label{classdetect__face_1_1Network_a26cf4112c7a92cc8d03e74e690c6831d}
+\begin{DoxyVerb}Load network weights.
+data_path: The path to the numpy-serialized network weights
+session: The current TensorFlow session
+ignore_missing: If true, serialized weights for missing layers are ignored.
+\end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!make\+\_\+var@{make\+\_\+var}}
+\index{make\+\_\+var@{make\+\_\+var}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{make\+\_\+var(self, name, shape)}{make_var(self, name, shape)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+make\+\_\+var (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{shape}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_a4ee4b07dc43c4092f4c1b63d89296057}{}\label{classdetect__face_1_1Network_a4ee4b07dc43c4092f4c1b63d89296057}
+\begin{DoxyVerb}Creates a new TensorFlow variable.\end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!setup@{setup}}
+\index{setup@{setup}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{setup(self)}{setup(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+setup (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_ac19da11c9d5136399bee1c5b2468be79}{}\label{classdetect__face_1_1Network_ac19da11c9d5136399bee1c5b2468be79}
+\begin{DoxyVerb}Construct the network. \end{DoxyVerb}
+ \index{detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}!validate\+\_\+padding@{validate\+\_\+padding}}
+\index{validate\+\_\+padding@{validate\+\_\+padding}!detect\+\_\+face\+::\+Network@{detect\+\_\+face\+::\+Network}}
+\subsubsection[{\texorpdfstring{validate\+\_\+padding(self, padding)}{validate_padding(self, padding)}}]{\setlength{\rightskip}{0pt plus 5cm}def detect\+\_\+face.\+Network.\+validate\+\_\+padding (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{padding}
+\end{DoxyParamCaption}
+)}\hypertarget{classdetect__face_1_1Network_a8f407ab687e3a91324e0b54b9011672a}{}\label{classdetect__face_1_1Network_a8f407ab687e3a91324e0b54b9011672a}
+\begin{DoxyVerb}Verifies that the padding is one of the supported ones.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+py/detect\+\_\+face.\+py\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dlib',['dLib',['../classRecognitionFactory_1_1dLib.html',1,'RecognitionFactory']]]
+  ['imageclass',['ImageClass',['../classfacenet_1_1ImageClass.html',1,'facenet']]]
 ];

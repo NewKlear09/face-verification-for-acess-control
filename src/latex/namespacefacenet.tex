@@ -1,0 +1,164 @@
+\hypertarget{namespacefacenet}{}\section{facenet Namespace Reference}
+\label{namespacefacenet}\index{facenet@{facenet}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfacenet_1_1ImageClass}{Image\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefacenet_a8687a4b833d739733305b1df325fb888}{triplet\+\_\+loss} (anchor, positive, negative, alpha)
+\item 
+def \hyperlink{namespacefacenet_ab63b951bab1032f33280607a4d099c2c}{decov\+\_\+loss} (xs)
+\item 
+def \hyperlink{namespacefacenet_ac610e0e8e066018e8abb4229542cfca3}{center\+\_\+loss} (features, label, alfa, nrof\+\_\+classes)
+\item 
+def {\bfseries get\+\_\+image\+\_\+paths\+\_\+and\+\_\+labels} (dataset)\hypertarget{namespacefacenet_a722a386f9002e327c8bed3ac2cbf0e83}{}\label{namespacefacenet_a722a386f9002e327c8bed3ac2cbf0e83}
+
+\item 
+def {\bfseries shuffle\+\_\+examples} (image\+\_\+paths, labels)\hypertarget{namespacefacenet_adad57c35372b07640d9b728e7586d273}{}\label{namespacefacenet_adad57c35372b07640d9b728e7586d273}
+
+\item 
+def \hyperlink{namespacefacenet_ab468887342368153445c951db5cebb69}{read\+\_\+images\+\_\+from\+\_\+disk} (input\+\_\+queue)
+\item 
+def {\bfseries random\+\_\+rotate\+\_\+image} (image)\hypertarget{namespacefacenet_ab44fa62068a1e719d931091e5f616c17}{}\label{namespacefacenet_ab44fa62068a1e719d931091e5f616c17}
+
+\item 
+def {\bfseries read\+\_\+and\+\_\+augment\+\_\+data} (image\+\_\+list, label\+\_\+list, image\+\_\+size, batch\+\_\+size, max\+\_\+nrof\+\_\+epochs, random\+\_\+crop, random\+\_\+flip, random\+\_\+rotate, nrof\+\_\+preprocess\+\_\+threads, shuffle=True)\hypertarget{namespacefacenet_a3cffda165223d8823bc4c2854b715b96}{}\label{namespacefacenet_a3cffda165223d8823bc4c2854b715b96}
+
+\item 
+def {\bfseries train} (total\+\_\+loss, global\+\_\+step, optimizer, learning\+\_\+rate, moving\+\_\+average\+\_\+decay, update\+\_\+gradient\+\_\+vars, log\+\_\+histograms=True)\hypertarget{namespacefacenet_acd1a15c58c23e784fb0fe17dfb63a3e7}{}\label{namespacefacenet_acd1a15c58c23e784fb0fe17dfb63a3e7}
+
+\item 
+def {\bfseries prewhiten} (x)\hypertarget{namespacefacenet_ae59f1f702cf24ee44e1cbc87c040ba9f}{}\label{namespacefacenet_ae59f1f702cf24ee44e1cbc87c040ba9f}
+
+\item 
+def {\bfseries crop} (image, random\+\_\+crop, image\+\_\+size)\hypertarget{namespacefacenet_a566cf422af34d218be5bece0dd3cc3bf}{}\label{namespacefacenet_a566cf422af34d218be5bece0dd3cc3bf}
+
+\item 
+def {\bfseries flip} (image, random\+\_\+flip)\hypertarget{namespacefacenet_aabe975dd0bab8526f1801793a802357f}{}\label{namespacefacenet_aabe975dd0bab8526f1801793a802357f}
+
+\item 
+def {\bfseries to\+\_\+rgb} (img)\hypertarget{namespacefacenet_ad4660d94910e620f360b6218736856dc}{}\label{namespacefacenet_ad4660d94910e620f360b6218736856dc}
+
+\item 
+def {\bfseries load\+\_\+data} (image\+\_\+paths, do\+\_\+random\+\_\+crop, do\+\_\+random\+\_\+flip, image\+\_\+size, do\+\_\+prewhiten=True)\hypertarget{namespacefacenet_ab514bbfd01b3545290e35c84ee1811e0}{}\label{namespacefacenet_ab514bbfd01b3545290e35c84ee1811e0}
+
+\item 
+def {\bfseries get\+\_\+label\+\_\+batch} (label\+\_\+data, batch\+\_\+size, batch\+\_\+index)\hypertarget{namespacefacenet_a66df4716495582a9c75e6a25730b5123}{}\label{namespacefacenet_a66df4716495582a9c75e6a25730b5123}
+
+\item 
+def {\bfseries get\+\_\+batch} (image\+\_\+data, batch\+\_\+size, batch\+\_\+index)\hypertarget{namespacefacenet_a39defc57ede0e7947ff03649bc25731a}{}\label{namespacefacenet_a39defc57ede0e7947ff03649bc25731a}
+
+\item 
+def {\bfseries get\+\_\+triplet\+\_\+batch} (triplets, batch\+\_\+index, batch\+\_\+size)\hypertarget{namespacefacenet_ad8699592011faac256ff18738d72625c}{}\label{namespacefacenet_ad8699592011faac256ff18738d72625c}
+
+\item 
+def {\bfseries get\+\_\+learning\+\_\+rate\+\_\+from\+\_\+file} (filename, epoch)\hypertarget{namespacefacenet_a3575f9424fa72db6e13fed9533e6f082}{}\label{namespacefacenet_a3575f9424fa72db6e13fed9533e6f082}
+
+\item 
+def {\bfseries get\+\_\+dataset} (paths, has\+\_\+class\+\_\+directories=True)\hypertarget{namespacefacenet_a4e5a7e85a4d83056dd83906c2be7e6cd}{}\label{namespacefacenet_a4e5a7e85a4d83056dd83906c2be7e6cd}
+
+\item 
+def {\bfseries get\+\_\+image\+\_\+paths} (facedir)\hypertarget{namespacefacenet_aaea60084eb6a8fa08d2916328fc31445}{}\label{namespacefacenet_aaea60084eb6a8fa08d2916328fc31445}
+
+\item 
+def {\bfseries split\+\_\+dataset} (dataset, split\+\_\+ratio, mode)\hypertarget{namespacefacenet_a9c02e7ae77e659339c1dfdad52bb9672}{}\label{namespacefacenet_a9c02e7ae77e659339c1dfdad52bb9672}
+
+\item 
+def {\bfseries load\+\_\+model} (model)\hypertarget{namespacefacenet_aa5f45188071fba9ce085778952aa238a}{}\label{namespacefacenet_aa5f45188071fba9ce085778952aa238a}
+
+\item 
+def {\bfseries get\+\_\+model\+\_\+filenames} (model\+\_\+dir)\hypertarget{namespacefacenet_a088d111a6a03d2c39e70ffb4cf0cedd0}{}\label{namespacefacenet_a088d111a6a03d2c39e70ffb4cf0cedd0}
+
+\item 
+def {\bfseries calculate\+\_\+roc} (thresholds, embeddings1, embeddings2, actual\+\_\+issame, nrof\+\_\+folds=10)\hypertarget{namespacefacenet_a9d781a188f85b866a3a0b854bf42de45}{}\label{namespacefacenet_a9d781a188f85b866a3a0b854bf42de45}
+
+\item 
+def {\bfseries calculate\+\_\+accuracy} (threshold, dist, actual\+\_\+issame)\hypertarget{namespacefacenet_ab94a07008ed9a2aaabe8779d11652971}{}\label{namespacefacenet_ab94a07008ed9a2aaabe8779d11652971}
+
+\item 
+def {\bfseries calculate\+\_\+val} (thresholds, embeddings1, embeddings2, actual\+\_\+issame, far\+\_\+target, nrof\+\_\+folds=10)\hypertarget{namespacefacenet_a891847781d812f6922c60e44cea7e27f}{}\label{namespacefacenet_a891847781d812f6922c60e44cea7e27f}
+
+\item 
+def {\bfseries calculate\+\_\+val\+\_\+far} (threshold, dist, actual\+\_\+issame)\hypertarget{namespacefacenet_ac50c9595f2c719fd93f5bb8c6568da23}{}\label{namespacefacenet_ac50c9595f2c719fd93f5bb8c6568da23}
+
+\item 
+def {\bfseries store\+\_\+revision\+\_\+info} (src\+\_\+path, output\+\_\+dir, arg\+\_\+string)\hypertarget{namespacefacenet_afd1075cd7525c57f5c9071a49b13332d}{}\label{namespacefacenet_afd1075cd7525c57f5c9071a49b13332d}
+
+\item 
+def {\bfseries list\+\_\+variables} (filename)\hypertarget{namespacefacenet_a5d6490a85f6bc56f3e5da8ef56b0c378}{}\label{namespacefacenet_a5d6490a85f6bc56f3e5da8ef56b0c378}
+
+\item 
+def {\bfseries put\+\_\+images\+\_\+on\+\_\+grid} (images, shape=(16, 8))\hypertarget{namespacefacenet_a7be95084243b7d886cd39799179d199f}{}\label{namespacefacenet_a7be95084243b7d886cd39799179d199f}
+
+\item 
+def {\bfseries write\+\_\+arguments\+\_\+to\+\_\+file} (args, filename)\hypertarget{namespacefacenet_aeff6337261a1c0dbb1a9b1a502f0f358}{}\label{namespacefacenet_aeff6337261a1c0dbb1a9b1a502f0f358}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Functions for building the face recognition network.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{facenet@{facenet}!center\+\_\+loss@{center\+\_\+loss}}
+\index{center\+\_\+loss@{center\+\_\+loss}!facenet@{facenet}}
+\subsubsection[{\texorpdfstring{center\+\_\+loss(features, label, alfa, nrof\+\_\+classes)}{center_loss(features, label, alfa, nrof_classes)}}]{\setlength{\rightskip}{0pt plus 5cm}def facenet.\+center\+\_\+loss (
+\begin{DoxyParamCaption}
+\item[{}]{features, }
+\item[{}]{label, }
+\item[{}]{alfa, }
+\item[{}]{nrof\+\_\+classes}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefacenet_ac610e0e8e066018e8abb4229542cfca3}{}\label{namespacefacenet_ac610e0e8e066018e8abb4229542cfca3}
+\begin{DoxyVerb}Center loss based on the paper "A Discriminative Feature Learning Approach for Deep Face Recognition"
+   (http://ydwen.github.io/papers/WenECCV16.pdf)
+\end{DoxyVerb}
+ \index{facenet@{facenet}!decov\+\_\+loss@{decov\+\_\+loss}}
+\index{decov\+\_\+loss@{decov\+\_\+loss}!facenet@{facenet}}
+\subsubsection[{\texorpdfstring{decov\+\_\+loss(xs)}{decov_loss(xs)}}]{\setlength{\rightskip}{0pt plus 5cm}def facenet.\+decov\+\_\+loss (
+\begin{DoxyParamCaption}
+\item[{}]{xs}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefacenet_ab63b951bab1032f33280607a4d099c2c}{}\label{namespacefacenet_ab63b951bab1032f33280607a4d099c2c}
+\begin{DoxyVerb}Decov loss as described in https://arxiv.org/pdf/1511.06068.pdf
+'Reducing Overfitting In Deep Networks by Decorrelating Representation'
+\end{DoxyVerb}
+ \index{facenet@{facenet}!read\+\_\+images\+\_\+from\+\_\+disk@{read\+\_\+images\+\_\+from\+\_\+disk}}
+\index{read\+\_\+images\+\_\+from\+\_\+disk@{read\+\_\+images\+\_\+from\+\_\+disk}!facenet@{facenet}}
+\subsubsection[{\texorpdfstring{read\+\_\+images\+\_\+from\+\_\+disk(input\+\_\+queue)}{read_images_from_disk(input_queue)}}]{\setlength{\rightskip}{0pt plus 5cm}def facenet.\+read\+\_\+images\+\_\+from\+\_\+disk (
+\begin{DoxyParamCaption}
+\item[{}]{input\+\_\+queue}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefacenet_ab468887342368153445c951db5cebb69}{}\label{namespacefacenet_ab468887342368153445c951db5cebb69}
+\begin{DoxyVerb}Consumes a single filename and label as a ' '-delimited string.
+Args:
+  filename_and_label_tensor: A scalar string tensor.
+Returns:
+  Two tensors: the decoded image, and the string label.
+\end{DoxyVerb}
+ \index{facenet@{facenet}!triplet\+\_\+loss@{triplet\+\_\+loss}}
+\index{triplet\+\_\+loss@{triplet\+\_\+loss}!facenet@{facenet}}
+\subsubsection[{\texorpdfstring{triplet\+\_\+loss(anchor, positive, negative, alpha)}{triplet_loss(anchor, positive, negative, alpha)}}]{\setlength{\rightskip}{0pt plus 5cm}def facenet.\+triplet\+\_\+loss (
+\begin{DoxyParamCaption}
+\item[{}]{anchor, }
+\item[{}]{positive, }
+\item[{}]{negative, }
+\item[{}]{alpha}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacefacenet_a8687a4b833d739733305b1df325fb888}{}\label{namespacefacenet_a8687a4b833d739733305b1df325fb888}
+\begin{DoxyVerb}Calculate the triplet loss according to the FaceNet paper
+
+Args:
+  anchor: the embeddings for the anchor images.
+  positive: the embeddings for the positive images.
+  negative: the embeddings for the negative images.
+  
+Returns:
+  the triplet loss according to the FaceNet paper as a float tensor.
+\end{DoxyVerb}
+ 

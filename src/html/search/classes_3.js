@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recognitionalgorithm',['RecognitionAlgorithm',['../classRecognitionFactory_1_1RecognitionAlgorithm.html',1,'RecognitionFactory']]]
+  ['network',['Network',['../classdetect__face_1_1Network.html',1,'detect_face']]]
 ];

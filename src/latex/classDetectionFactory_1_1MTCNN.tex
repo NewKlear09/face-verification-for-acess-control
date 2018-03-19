@@ -1,0 +1,142 @@
+\hypertarget{classDetectionFactory_1_1MTCNN}{}\section{Detection\+Factory.\+M\+T\+C\+NN Class Reference}
+\label{classDetectionFactory_1_1MTCNN}\index{Detection\+Factory.\+M\+T\+C\+NN@{Detection\+Factory.\+M\+T\+C\+NN}}
+Inheritance diagram for Detection\+Factory.\+M\+T\+C\+NN\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDetectionFactory_1_1MTCNN}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)\hypertarget{classDetectionFactory_1_1MTCNN_abb5e3f6589b98423f5ea579a303c999b}{}\label{classDetectionFactory_1_1MTCNN_abb5e3f6589b98423f5ea579a303c999b}
+
+\item 
+def \hyperlink{classDetectionFactory_1_1MTCNN_ac7d884cb82b4ac91212453121238e641}{yaw\+\_\+movement} (self, img, bb)
+\begin{DoxyCompactList}\small\item\em It will select if the face image is suitable or not to be sent to the verification system according to the yaw movement of the head towards the camera. \end{DoxyCompactList}\item 
+def \hyperlink{classDetectionFactory_1_1MTCNN_a879b84b1ec40bdd68775e7f2368bb856}{blink\+\_\+eyes} (self, img, bb)
+\begin{DoxyCompactList}\small\item\em It will select if the face image is suitable or not to be sent to the verification system according to the eyes of the person. \end{DoxyCompactList}\item 
+def \hyperlink{classDetectionFactory_1_1MTCNN_a10083feb0513bee3bdffca54ca1596be}{face\+\_\+detection} (self, img)
+\begin{DoxyCompactList}\small\item\em It will search for the biggest face on the image using dlib\textquotesingle{}s face detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries onet}\hypertarget{classDetectionFactory_1_1MTCNN_a620b2a799a7152753f5b1e2450fb4c95}{}\label{classDetectionFactory_1_1MTCNN_a620b2a799a7152753f5b1e2450fb4c95}
+
+\item 
+{\bfseries minsize}\hypertarget{classDetectionFactory_1_1MTCNN_a88a63fe4097b7472254b5e4c27c08136}{}\label{classDetectionFactory_1_1MTCNN_a88a63fe4097b7472254b5e4c27c08136}
+
+\item 
+{\bfseries threshold}\hypertarget{classDetectionFactory_1_1MTCNN_aa03ad85cc768388c5b62b74bd63d1359}{}\label{classDetectionFactory_1_1MTCNN_aa03ad85cc768388c5b62b74bd63d1359}
+
+\item 
+{\bfseries factor}\hypertarget{classDetectionFactory_1_1MTCNN_a1dc564bd588f6af67eb8ef512df433ab}{}\label{classDetectionFactory_1_1MTCNN_a1dc564bd588f6af67eb8ef512df433ab}
+
+\item 
+{\bfseries margin}\hypertarget{classDetectionFactory_1_1MTCNN_a09ecd3174676e45de708ca99ecbe64b7}{}\label{classDetectionFactory_1_1MTCNN_a09ecd3174676e45de708ca99ecbe64b7}
+
+\item 
+{\bfseries image\+\_\+size}\hypertarget{classDetectionFactory_1_1MTCNN_af61041c4a7ca9791e88f33ee3ea71e67}{}\label{classDetectionFactory_1_1MTCNN_af61041c4a7ca9791e88f33ee3ea71e67}
+
+\item 
+{\bfseries img2}\hypertarget{classDetectionFactory_1_1MTCNN_ae87e713438cdb63a191a69d28aec497b}{}\label{classDetectionFactory_1_1MTCNN_ae87e713438cdb63a191a69d28aec497b}
+
+\item 
+{\bfseries cc}\hypertarget{classDetectionFactory_1_1MTCNN_a676877a356d9b222c7afe1d5ba515dd1}{}\label{classDetectionFactory_1_1MTCNN_a676877a356d9b222c7afe1d5ba515dd1}
+
+\item 
+{\bfseries landmarks}\hypertarget{classDetectionFactory_1_1MTCNN_a31d4a96842c6285659c64e6239dcda22}{}\label{classDetectionFactory_1_1MTCNN_a31d4a96842c6285659c64e6239dcda22}
+
+\item 
+{\bfseries bb}\hypertarget{classDetectionFactory_1_1MTCNN_abcc415a7a422ca85fcec23cc426a27e4}{}\label{classDetectionFactory_1_1MTCNN_abcc415a7a422ca85fcec23cc426a27e4}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}!blink\+\_\+eyes@{blink\+\_\+eyes}}
+\index{blink\+\_\+eyes@{blink\+\_\+eyes}!Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}}
+\subsubsection[{\texorpdfstring{blink\+\_\+eyes(self, img, bb)}{blink_eyes(self, img, bb)}}]{\setlength{\rightskip}{0pt plus 5cm}def Detection\+Factory.\+M\+T\+C\+N\+N.\+blink\+\_\+eyes (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{img, }
+\item[{}]{bb}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectionFactory_1_1MTCNN_a879b84b1ec40bdd68775e7f2368bb856}{}\label{classDetectionFactory_1_1MTCNN_a879b84b1ec40bdd68775e7f2368bb856}
+
+
+It will select if the face image is suitable or not to be sent to the verification system according to the eyes of the person. 
+
+If the person has his/her eyes closed then the image will not be used for the verification system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image acquired by the camera \\
+\hline
+{\em bb} & Bounding box that delineates the biggest face found on the image\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & if the face image is suitable to be sent \\
+\hline
+{\em False} & if not \\
+\hline
+\end{DoxyRetVals}
+\index{Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}!face\+\_\+detection@{face\+\_\+detection}}
+\index{face\+\_\+detection@{face\+\_\+detection}!Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}}
+\subsubsection[{\texorpdfstring{face\+\_\+detection(self, img)}{face_detection(self, img)}}]{\setlength{\rightskip}{0pt plus 5cm}def Detection\+Factory.\+M\+T\+C\+N\+N.\+face\+\_\+detection (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{img}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectionFactory_1_1MTCNN_a10083feb0513bee3bdffca54ca1596be}{}\label{classDetectionFactory_1_1MTCNN_a10083feb0513bee3bdffca54ca1596be}
+
+
+It will search for the biggest face on the image using dlib\textquotesingle{}s face detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image acquired by the camera\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & if there is a face detected \\
+\hline
+{\em False} & if not \\
+\hline
+\end{DoxyRetVals}
+\index{Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}!yaw\+\_\+movement@{yaw\+\_\+movement}}
+\index{yaw\+\_\+movement@{yaw\+\_\+movement}!Detection\+Factory\+::\+M\+T\+C\+NN@{Detection\+Factory\+::\+M\+T\+C\+NN}}
+\subsubsection[{\texorpdfstring{yaw\+\_\+movement(self, img, bb)}{yaw_movement(self, img, bb)}}]{\setlength{\rightskip}{0pt plus 5cm}def Detection\+Factory.\+M\+T\+C\+N\+N.\+yaw\+\_\+movement (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{img, }
+\item[{}]{bb}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetectionFactory_1_1MTCNN_ac7d884cb82b4ac91212453121238e641}{}\label{classDetectionFactory_1_1MTCNN_ac7d884cb82b4ac91212453121238e641}
+
+
+It will select if the face image is suitable or not to be sent to the verification system according to the yaw movement of the head towards the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image acquired by the camera \\
+\hline
+{\em bb} & Bounding box that delineates the biggest face found on the image\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em True} & if the face image is suitable to be sent \\
+\hline
+{\em False} & if not \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+py/Detection\+Factory.\+py\end{DoxyCompactItemize}
