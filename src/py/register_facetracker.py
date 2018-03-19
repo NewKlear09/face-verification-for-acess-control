@@ -40,9 +40,6 @@ def recvall(sock, count):
         count -= len(newbuf)
     return buf
 
-def nothing(x):
-    pass
-
 def main():
 	global out, out2
 	global c

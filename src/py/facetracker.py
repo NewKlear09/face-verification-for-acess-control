@@ -38,10 +38,6 @@ def recvall(sock, count):
     return buf
 
 
-def nothing(x):
-    pass
-
-
 def main():
 	try:
 		algorithm = sys.argv[1]

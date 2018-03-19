@@ -15,7 +15,7 @@ from datetime import datetime
 TCP_IP = 'localhost'
 TCP_PORT = 8000
 
-file = open("registartion_values.txt", "a")
+file = open("../../logs/registartion_values.txt", "a")
 
 ##
 ## @brief      Function that will convert the socket received into a string.

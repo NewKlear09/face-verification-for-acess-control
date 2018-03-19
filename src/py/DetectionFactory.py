@@ -1,3 +1,8 @@
+"""Script that implements the face detection algorithms in a factory method for the encapsulating of object creation.
+If a new algorithm is found, just add to the factory and there will be no need of change the code that it is on a higher level.
+Algorithms implemented: Dlib, MTCNN.
+"""
+
 import cv2
 import openface
 import numpy as np
@@ -169,7 +174,7 @@ class MTCNN(DetectionAlgorithm):
 	##
 	## @brief      It will select if the face image is 
 	## suitable or not to be sent to the verification system according to the eyes of the person.
-	## If the person has his/her eyes closed then the image will not be used for the verification system.
+	## If the person has his/her eyes closed then the image will not be used for the verification system. IT DOES NOT WORK WITH MTCNN!
 	## 
 	## @param      img   Image acquired by the camera
 	## @param      bb    Bounding box that delineates the biggest face found on the image
@@ -181,7 +186,7 @@ class MTCNN(DetectionAlgorithm):
 		return True
 
 	##
-	## @brief      It will search for the biggest face on the image using dlib's face detection
+	## @brief      It will search for the biggest face on the image using MTCNN's face detection.
 	##
 	## @param      img   Image acquired by the camera
 	##

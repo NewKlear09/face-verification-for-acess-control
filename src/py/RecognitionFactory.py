@@ -1,3 +1,8 @@
+"""Script that implements the face recognition algorithms in a factory method for the encapsulating of object creation.
+If a new algorithm is found, just add to the factory and there will be no need of change the code that it is on a higher level.
+Algorithms implemented: Dlib, OpenFace, DeepFace.
+"""
+
 import dlib
 import openface
 import numpy as np
@@ -35,6 +40,14 @@ class dLib(RecognitionAlgorithm):
 
 		self.threshold = 0.7
 	
+	##
+	## @brief      According to the image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## 
+	## @param      img   Image acquired by the camera
+	## @param      bb    Bounding box that delineates the biggest face found on the image
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor(self, img, bb, landmarks):
 		shape = self.sp(img, bb)
 		self.alignedFace = img
@@ -47,11 +60,30 @@ class dLib(RecognitionAlgorithm):
 		face_descriptor = np.array(self.facerec.compute_face_descriptor(self.alignedFace, shape))
 		return face_descriptor
 
+	##
+	## @brief      According to the face image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## 
+	## @param      img   Face image gave by the face detector
+	## @param      bb    Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor_alignedImage(self, img, bb):
 		shape = self.sp(img, dlib.rectangle(long(bb[0]), long(bb[1]), long(bb[2]), long(bb[3])))
 		face_descriptor = np.array(self.facerec.compute_face_descriptor(img, shape))
 		return face_descriptor
 
+	
+	##
+	## @brief      Given two face descriptors it subtract one to the other and then calculates the norm of the vector.
+	## This is also called the similarity between two vectors.
+	## It is usally made on the face verification process and facetracking. The higher the value the more likely that it is a different person.
+	## 
+	## @param      face_descriptor1   Face image gave by the face detector
+	## @param      face_descriptor2    Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)
+	##
+	## @retval     Value of similarity between vectors 
+	##
 	def compare(self, face_descriptor1, face_descriptor2):
 		return np.linalg.norm(face_descriptor1 - face_descriptor2)
 
@@ -69,6 +101,14 @@ class OpenFace(RecognitionAlgorithm):
 		self.net = openface.TorchNeuralNet(self.openfaceModelDir, 96)
 		self.threshold = 0.8
 	
+	##
+	## @brief      According to the image given, it will align the face, apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## 
+	## @param      img   Image acquired by the camera
+	## @param      bb    Bounding box that delineates the biggest face found on the image
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor(self, img, bb, landmarks):	
 		self.alignedFace = self.align.align(96, img, bb, landmarks, landmarkIndices=openface.AlignDlib.OUTER_EYES_AND_NOSE)
 		if preprocessing == "Gamma":
@@ -79,10 +119,28 @@ class OpenFace(RecognitionAlgorithm):
 		rep = self.net.forward(self.alignedFace)
 		return rep
 
+	##
+	## @brief      According to the face image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## 
+	## @param      img   Face image gave by the face detector
+	## @param      bb    Not used, can be anything
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor_alignedImage(self, alignedFace, bb):
 		rep = self.net.forward(alignedFace)
 		return rep	
-
+	
+	##
+	## @brief      Given two face descriptors it subtract one to the other and then calculates the norm of the vector.
+	## This is also called the similarity between two vectors.
+	## It is usally made on the face verification process and facetracking. The higher the value the more likely that it is a different person.
+	## 
+	## @param      face_descriptor1   Face image gave by the face detector
+	## @param      face_descriptor2    Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)
+	##
+	## @retval     Value of similarity between vectors 
+	##
 	def compare(self, rep1, rep2):
 		try:
 			d = rep1 - rep2
@@ -113,6 +171,14 @@ class DeepFace(RecognitionAlgorithm):
 		gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.6)
 		self.sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
 
+	##
+	## @brief      According to the image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## 
+	## @param      img   Image acquired by the camera
+	## @param      bb    Bounding box that delineates the biggest face found on the image
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor(self, img, bb, landmarks):
 		cropped = []
 		scaled = []
@@ -136,9 +202,30 @@ class DeepFace(RecognitionAlgorithm):
 		emb_array[0, :] = self.sess.run(self.embeddings, feed_dict=feed_dict)
 		return emb_array[0, :]
 
+	
+	##
+	## @brief      According to the face image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network.
+	## NOT IMPLEMENTED! 
+	##
+	## @param      img   Face image gave by the face detector
+	## @param      bb    Not used, can be anything
+	##
+	## @retval     The face descriptor
+	##
 	def calc_face_descriptor_alignedImage(self, alignedFace, bb):
 		return 0
 
+	
+	##
+	## @brief      Given two face descriptors it subtract one to the other and then calculates the norm of the vector.
+	## This is also called the similarity between two vectors.
+	## It is usally made on the face verification process and facetracking. The higher the value the more likely that it is a different person.
+	## 
+	## @param      face_descriptor1   Face image gave by the face detector
+	## @param      face_descriptor2    Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)
+	##
+	## @retval     Value of similarity between vectors 
+	##
 	def compare(self, rep1, rep2):
 		d = np.linalg.norm(rep1 - rep2)
 		return d

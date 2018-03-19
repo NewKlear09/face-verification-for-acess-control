@@ -5,6 +5,14 @@ import send_socket as ss
 global i
 i = 0
 
+##
+## @brief      Application of Gamma Correction in an image
+## 
+## @param      image   Image
+## @param      gamma Gamma value pretended 
+##
+## @retval     Image modified as result of the operation
+##
 def adjust_gamma(image, gamma=1.0):
 	# build a lookup table mapping the pixel values [0, 255] to
 	# their adjusted gamma values
@@ -15,6 +23,14 @@ def adjust_gamma(image, gamma=1.0):
 	# apply gamma correction using the lookup table
 	return cv2.LUT(image, table)
 
+
+##
+## @brief      Application of Contrast-limited adaptive histogram equalization (CLAHE) in an image
+## 
+## @param      img   Image
+##
+## @retval     Image modified as result of the operation
+##
 def apply_clahe(image):
 	clahe = cv2.createCLAHE(clipLimit=1.5, tileGridSize=(4,4))
 	lab = cv2.cvtColor(image, cv2.COLOR_RGB2LAB)
@@ -27,7 +43,7 @@ def apply_clahe(image):
 	return image
 
 ##
-## @brief      In construction phase.
+## @brief      Controls the number of descriptors sent to the server. If the person is not the same it will reset the counter.
 ## 
 def send_descriptors_socket(descriptor, person_change):
 	global i
@@ -41,7 +57,7 @@ def send_descriptors_socket(descriptor, person_change):
 		i = 0
 
 ##
-## @brief      In construction phase.
+## @brief      Controls the number of descriptors sent to the server. If the person is not the same it will reset the counter.
 ## 
 def send_descriptors_socket2(descriptor, person_change):
 	global i

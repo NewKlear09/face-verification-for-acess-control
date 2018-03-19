@@ -12,15 +12,12 @@ Inheritance diagram for Recognition\+Factory.\+d\+Lib\+:\begin{figure}[H]
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)\hypertarget{classRecognitionFactory_1_1dLib_aa5c5fbeb53475fa667bc52a438dbf293}{}\label{classRecognitionFactory_1_1dLib_aa5c5fbeb53475fa667bc52a438dbf293}
 
 \item 
-def {\bfseries calc\+\_\+face\+\_\+descriptor} (self, img, bb, landmarks)\hypertarget{classRecognitionFactory_1_1dLib_ab3ed82bd96655fad7d824e91ccf6de15}{}\label{classRecognitionFactory_1_1dLib_ab3ed82bd96655fad7d824e91ccf6de15}
-
-\item 
-def {\bfseries calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image} (self, img, bb)\hypertarget{classRecognitionFactory_1_1dLib_a51eecfe3e4e689ca715029362bec4cea}{}\label{classRecognitionFactory_1_1dLib_a51eecfe3e4e689ca715029362bec4cea}
-
-\item 
-def {\bfseries compare} (self, face\+\_\+descriptor1, face\+\_\+descriptor2)\hypertarget{classRecognitionFactory_1_1dLib_a519b435395efe6218c3518daf350461e}{}\label{classRecognitionFactory_1_1dLib_a519b435395efe6218c3518daf350461e}
-
-\end{DoxyCompactItemize}
+def \hyperlink{classRecognitionFactory_1_1dLib_ab3ed82bd96655fad7d824e91ccf6de15}{calc\+\_\+face\+\_\+descriptor} (self, img, bb, landmarks)
+\begin{DoxyCompactList}\small\item\em According to the image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network. \end{DoxyCompactList}\item 
+def \hyperlink{classRecognitionFactory_1_1dLib_a51eecfe3e4e689ca715029362bec4cea}{calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image} (self, img, bb)
+\begin{DoxyCompactList}\small\item\em According to the face image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network. \end{DoxyCompactList}\item 
+def \hyperlink{classRecognitionFactory_1_1dLib_a519b435395efe6218c3518daf350461e}{compare} (self, face\+\_\+descriptor1, face\+\_\+descriptor2)
+\begin{DoxyCompactList}\small\item\em Given two face descriptors it subtract one to the other and then calculates the norm of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,6 +37,87 @@ def {\bfseries compare} (self, face\+\_\+descriptor1, face\+\_\+descriptor2)\hyp
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}!calc\+\_\+face\+\_\+descriptor@{calc\+\_\+face\+\_\+descriptor}}
+\index{calc\+\_\+face\+\_\+descriptor@{calc\+\_\+face\+\_\+descriptor}!Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}}
+\subsubsection[{\texorpdfstring{calc\+\_\+face\+\_\+descriptor(self, img, bb, landmarks)}{calc_face_descriptor(self, img, bb, landmarks)}}]{\setlength{\rightskip}{0pt plus 5cm}def Recognition\+Factory.\+d\+Lib.\+calc\+\_\+face\+\_\+descriptor (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{img, }
+\item[{}]{bb, }
+\item[{}]{landmarks}
+\end{DoxyParamCaption}
+)}\hypertarget{classRecognitionFactory_1_1dLib_ab3ed82bd96655fad7d824e91ccf6de15}{}\label{classRecognitionFactory_1_1dLib_ab3ed82bd96655fad7d824e91ccf6de15}
+
+
+According to the image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Image acquired by the camera \\
+\hline
+{\em bb} & Bounding box that delineates the biggest face found on the image\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & face descriptor \\
+\hline
+\end{DoxyRetVals}
+\index{Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}!calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image@{calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image}}
+\index{calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image@{calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image}!Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}}
+\subsubsection[{\texorpdfstring{calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image(self, img, bb)}{calc_face_descriptor_alignedImage(self, img, bb)}}]{\setlength{\rightskip}{0pt plus 5cm}def Recognition\+Factory.\+d\+Lib.\+calc\+\_\+face\+\_\+descriptor\+\_\+aligned\+Image (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{img, }
+\item[{}]{bb}
+\end{DoxyParamCaption}
+)}\hypertarget{classRecognitionFactory_1_1dLib_a51eecfe3e4e689ca715029362bec4cea}{}\label{classRecognitionFactory_1_1dLib_a51eecfe3e4e689ca715029362bec4cea}
+
+
+According to the face image given, it will apply the preprocessing technique (if aplicable) and then forward through the neural network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & Face image gave by the face detector \\
+\hline
+{\em bb} & Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & face descriptor \\
+\hline
+\end{DoxyRetVals}
+\index{Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}!compare@{compare}}
+\index{compare@{compare}!Recognition\+Factory\+::d\+Lib@{Recognition\+Factory\+::d\+Lib}}
+\subsubsection[{\texorpdfstring{compare(self, face\+\_\+descriptor1, face\+\_\+descriptor2)}{compare(self, face_descriptor1, face_descriptor2)}}]{\setlength{\rightskip}{0pt plus 5cm}def Recognition\+Factory.\+d\+Lib.\+compare (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{face\+\_\+descriptor1, }
+\item[{}]{face\+\_\+descriptor2}
+\end{DoxyParamCaption}
+)}\hypertarget{classRecognitionFactory_1_1dLib_a519b435395efe6218c3518daf350461e}{}\label{classRecognitionFactory_1_1dLib_a519b435395efe6218c3518daf350461e}
+
+
+Given two face descriptors it subtract one to the other and then calculates the norm of the vector. 
+
+This is also called the similarity between two vectors. It is usally made on the face verification process and facetracking. The higher the value the more likely that it is a different person.
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\+\_\+descriptor1} & Face image gave by the face detector \\
+\hline
+{\em face\+\_\+descriptor2} & Bounding box that delineates the biggest face found on the image (in this case is the face image dimensions)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & of similarity between vectors \\
+\hline
+\end{DoxyRetVals}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
