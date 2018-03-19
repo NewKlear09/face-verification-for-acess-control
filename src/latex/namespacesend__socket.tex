@@ -1,0 +1,191 @@
+\hypertarget{namespacesend__socket}{\section{send\-\_\-socket Namespace Reference}
+\label{namespacesend__socket}\index{send\-\_\-socket@{send\-\_\-socket}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacesend__socket_a260ad511d2d46bb01685c87b34d222b0}{send\-\_\-signal\-\_\-image}
+\begin{DoxyCompactList}\small\item\em Sends a signal through a socket according to the current state of the system. \end{DoxyCompactList}\item 
+\hypertarget{namespacesend__socket_a4cfa64d54aeca3b78b3318dcbe1c2fec}{def \hyperlink{namespacesend__socket_a4cfa64d54aeca3b78b3318dcbe1c2fec}{connect}}\label{namespacesend__socket_a4cfa64d54aeca3b78b3318dcbe1c2fec}
+
+\begin{DoxyCompactList}\small\item\em Connects the socket that connects the face\-\_\-tracker (client) and the camera program (server). \end{DoxyCompactList}\item 
+\hypertarget{namespacesend__socket_a0f7b7104845a17d007a666c1af343765}{def {\bfseries close}}\label{namespacesend__socket_a0f7b7104845a17d007a666c1af343765}
+
+\item 
+def \hyperlink{namespacesend__socket_aeb5689be298a7688183cc64033a0e133}{send\-\_\-warning\-\_\-camera}
+\begin{DoxyCompactList}\small\item\em Sends a warning to the camera. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_a175b07f4e5553a550e407449ee4d515c}{send\-\_\-time}
+\begin{DoxyCompactList}\small\item\em Sends the time.\-time() when the N\-F\-C is passed. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_aae1cb172e6c1ed0b8ba07ffca84110db}{send\-\_\-algorithm}
+\begin{DoxyCompactList}\small\item\em Sends a string in order to the server knows what algorithm will be used. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_a87bac1ceef1a42db7f75298553bb4cff}{send\-\_\-images}
+\begin{DoxyCompactList}\small\item\em Sends an image through a socket. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_a3f6ef0d43b1f18943f50cd7f30f40c10}{send\-\_\-descriptors}
+\begin{DoxyCompactList}\small\item\em Sends a face descriptor through socket. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_a6ba5d738937fec9db7a5aaa1582f6e4b}{send\-\_\-bb}
+\begin{DoxyCompactList}\small\item\em Sends the bounding box of the detected person. \end{DoxyCompactList}\item 
+\hypertarget{namespacesend__socket_a6e3f996be0a8189c8b9a71cfd43e2edc}{def \hyperlink{namespacesend__socket_a6e3f996be0a8189c8b9a71cfd43e2edc}{send\-\_\-warning}}\label{namespacesend__socket_a6e3f996be0a8189c8b9a71cfd43e2edc}
+
+\begin{DoxyCompactList}\small\item\em Sends a signal to the server. \end{DoxyCompactList}\item 
+def \hyperlink{namespacesend__socket_a0ee66d89b9cb202b46365cd8f7ff1cd8}{send\-\_\-ticket\-\_\-number}
+\begin{DoxyCompactList}\small\item\em Sends the ticket number via socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacesend__socket_aff9c2ee4276f3f540e8597971a6a69d4}{string {\bfseries T\-C\-P\-\_\-\-I\-P} = 'localhost'}\label{namespacesend__socket_aff9c2ee4276f3f540e8597971a6a69d4}
+
+\item 
+\hypertarget{namespacesend__socket_a801276ca5aa52628cd225cff57bc6716}{int {\bfseries T\-C\-P\-\_\-\-P\-O\-R\-T} = 8000}\label{namespacesend__socket_a801276ca5aa52628cd225cff57bc6716}
+
+\item 
+\hypertarget{namespacesend__socket_a6eb06582ba93cc3bd473c5b28670f21e}{list {\bfseries encode\-\_\-param} = \mbox{[}int(cv2.\-I\-M\-W\-R\-I\-T\-E\-\_\-\-J\-P\-E\-G\-\_\-\-Q\-U\-A\-L\-I\-T\-Y),90\mbox{]}}\label{namespacesend__socket_a6eb06582ba93cc3bd473c5b28670f21e}
+
+\item 
+\hypertarget{namespacesend__socket_a2b20b13c6b71b5d1a811e722e0aa90ac}{int {\bfseries T\-C\-P\-\_\-\-P\-O\-R\-T2} = 8003}\label{namespacesend__socket_a2b20b13c6b71b5d1a811e722e0aa90ac}
+
+\item 
+\hypertarget{namespacesend__socket_a7c53b9a62faec74925fe77823b6c93c3}{int {\bfseries T\-C\-P\-\_\-\-P\-O\-R\-T3} = 8004}\label{namespacesend__socket_a7c53b9a62faec74925fe77823b6c93c3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Functions that are used to communicate between programs using sockets.
+This sockets are used to send images, descriptors arrays, and signals from one program to another. 
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{namespacesend__socket_aae1cb172e6c1ed0b8ba07ffca84110db}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-algorithm@{send\-\_\-algorithm}}
+\index{send\-\_\-algorithm@{send\-\_\-algorithm}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-algorithm}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-algorithm (
+\begin{DoxyParamCaption}
+\item[{}]{algorithm}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_aae1cb172e6c1ed0b8ba07ffca84110db}
+
+
+Sends a string in order to the server knows what algorithm will be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & \char`\"{}\-Open\-Face\char`\"{} or \char`\"{}d\-Lib\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a6ba5d738937fec9db7a5aaa1582f6e4b}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-bb@{send\-\_\-bb}}
+\index{send\-\_\-bb@{send\-\_\-bb}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-bb}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-bb (
+\begin{DoxyParamCaption}
+\item[{}]{bb}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a6ba5d738937fec9db7a5aaa1582f6e4b}
+
+
+Sends the bounding box of the detected person. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bb} & Bounding box \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a3f6ef0d43b1f18943f50cd7f30f40c10}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-descriptors@{send\-\_\-descriptors}}
+\index{send\-\_\-descriptors@{send\-\_\-descriptors}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-descriptors}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-descriptors (
+\begin{DoxyParamCaption}
+\item[{}]{face\-\_\-descriptor}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a3f6ef0d43b1f18943f50cd7f30f40c10}
+
+
+Sends a face descriptor through socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\-\_\-descriptor} & The face descriptor \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a87bac1ceef1a42db7f75298553bb4cff}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-images@{send\-\_\-images}}
+\index{send\-\_\-images@{send\-\_\-images}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-images}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-images (
+\begin{DoxyParamCaption}
+\item[{}]{face\-\_\-img}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a87bac1ceef1a42db7f75298553bb4cff}
+
+
+Sends an image through a socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\-\_\-img} & The face image \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a260ad511d2d46bb01685c87b34d222b0}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-signal\-\_\-image@{send\-\_\-signal\-\_\-image}}
+\index{send\-\_\-signal\-\_\-image@{send\-\_\-signal\-\_\-image}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-signal\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-signal\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{}]{string\-Data}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a260ad511d2d46bb01685c87b34d222b0}
+
+
+Sends a signal through a socket according to the current state of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\-Data} & Signal \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a0ee66d89b9cb202b46365cd8f7ff1cd8}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-ticket\-\_\-number@{send\-\_\-ticket\-\_\-number}}
+\index{send\-\_\-ticket\-\_\-number@{send\-\_\-ticket\-\_\-number}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-ticket\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-ticket\-\_\-number (
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a0ee66d89b9cb202b46365cd8f7ff1cd8}
+
+
+Sends the ticket number via socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Ticket number \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_a175b07f4e5553a550e407449ee4d515c}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-time@{send\-\_\-time}}
+\index{send\-\_\-time@{send\-\_\-time}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{}]{time}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_a175b07f4e5553a550e407449ee4d515c}
+
+
+Sends the time.\-time() when the N\-F\-C is passed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & time.\-time() \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespacesend__socket_aeb5689be298a7688183cc64033a0e133}{\index{send\-\_\-socket@{send\-\_\-socket}!send\-\_\-warning\-\_\-camera@{send\-\_\-warning\-\_\-camera}}
+\index{send\-\_\-warning\-\_\-camera@{send\-\_\-warning\-\_\-camera}!send_socket@{send\-\_\-socket}}
+\subsubsection[{send\-\_\-warning\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}def send\-\_\-socket.\-send\-\_\-warning\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{}]{sock2, }
+\item[{}]{string\-Data}
+\end{DoxyParamCaption}
+)}}\label{namespacesend__socket_aeb5689be298a7688183cc64033a0e133}
+
+
+Sends a warning to the camera. 
+
+1 if the person detected changes and 0 if not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock2} & Socket \\
+\hline
+{\em string\-Data} & \char`\"{}1\char`\"{} or \char`\"{}0\char`\"{} \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,53 @@
+\hypertarget{namespacefacetracker}{\section{facetracker Namespace Reference}
+\label{namespacefacetracker}\index{facetracker@{facetracker}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefacetracker_afd03f1d703bca2c3f01ceac6ca711f17}{recvall}
+\begin{DoxyCompactList}\small\item\em Function that will convert the socket received into a string. \end{DoxyCompactList}\item 
+\hypertarget{namespacefacetracker_a8c68f7ebd8f2b1e99b6d3336430ad2be}{def {\bfseries main}}\label{namespacefacetracker_a8c68f7ebd8f2b1e99b6d3336430ad2be}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespacefacetracker_af8f8c0f83a1bcab62b58ffe151d54257}{{\bfseries font} = cv2.\-F\-O\-N\-T\-\_\-\-H\-E\-R\-S\-H\-E\-Y\-\_\-\-S\-I\-M\-P\-L\-E\-X}\label{namespacefacetracker_af8f8c0f83a1bcab62b58ffe151d54257}
+
+\item 
+\hypertarget{namespacefacetracker_a0d3f577882e0f8deade5722e75594b58}{string {\bfseries T\-C\-P\-\_\-\-I\-P} = 'localhost'}\label{namespacefacetracker_a0d3f577882e0f8deade5722e75594b58}
+
+\item 
+\hypertarget{namespacefacetracker_a7fd84c2f2afecb14acb6526007adb04a}{int {\bfseries T\-C\-P\-\_\-\-P\-O\-R\-T} = 8002}\label{namespacefacetracker_a7fd84c2f2afecb14acb6526007adb04a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Program that tracks the face of the subject that appears on the camera for the verification process (turnstile simulation). 
+It will also calulate the descriptors that define the face presented and, if needed, it will send such descriptors to the verification server.
+Finally, the program will send a signal to the camera acquisition program if the person changes for a further calibration. 
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\hypertarget{namespacefacetracker_afd03f1d703bca2c3f01ceac6ca711f17}{\index{facetracker@{facetracker}!recvall@{recvall}}
+\index{recvall@{recvall}!facetracker@{facetracker}}
+\subsubsection[{recvall}]{\setlength{\rightskip}{0pt plus 5cm}def facetracker.\-recvall (
+\begin{DoxyParamCaption}
+\item[{}]{sock, }
+\item[{}]{count}
+\end{DoxyParamCaption}
+)}}\label{namespacefacetracker_afd03f1d703bca2c3f01ceac6ca711f17}
+
+
+Function that will convert the socket received into a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sock} & The socket \\
+\hline
+{\em count} & The socket size\\
+\hline
+\end{DoxyParams}
+String Socket Information 
