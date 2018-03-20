@@ -83,7 +83,7 @@ documentation.sh
 
 ### Software Structure
 
-![Alt text](./display images/BehaviorDiagram.png?raw=true "Behaviour Diagram")
+![Alt text](./readme_images/BehaviorDiagram.png?raw=true "Behaviour Diagram")
 
 
 ## Contributing
