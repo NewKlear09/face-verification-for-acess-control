@@ -8,4 +8,4 @@ xterm -title "Camera" -hold -e " cd cpp; make; sleep 5; ./webcam_acquisition" &
 xterm -title "Store Registration Server" -hold -e "cd py; python register_server.py" &
 xterm -title "Face Tracker" -hold -e " cd py; python register_facetracker.py OpenFace" &
 xterm -title "NFC/KeyBoard Reader" -hold -e "cd py; python NFC_Arduino.py" &
-xterm -title "IMSHOW" -hold -e " sleep 5;cd py; python img_screen.py" 
+xterm -title "IMSHOW" -hold -e " sleep 5;cd py; python img_screen.py"
