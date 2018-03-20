@@ -75,9 +75,15 @@ xterm -title "Face Tracker" -hold -e " cd py; python register_facetracker.py <\A
 
 and replace <\Algorithm/> by "OpenFace", "dLib" or "DeepFace".
 
+for more insight on each function just open the Doxygen documentation:
+```
+cd src
+documentation.sh
+```
+
 ### Software Structure
 
-![Alt text](./display\ images/BehaviorDiagram.png?raw=true "Behaviour Diagram")
+![Alt text](./display images/BehaviorDiagram.png?raw=true "Behaviour Diagram")
 
 
 ## Contributing
