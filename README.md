@@ -4,9 +4,9 @@
 
 ## Getting Started
 
-Face verification system using several opensource and state of the art algorithms. This project is meant to be used for access control in real time. For that, the whole system is divided into smaller scripts that are communicating between sockets thus simulating a server and its several requests.
+Face verification system using several opensource and state of the art algorithms. This project is meant to be used for access control in real time. For that, the whole system is divided into smaller scripts that are communicating between sockets thus simulating a server and its several clients.
 
-First, there are acquired images from the webcam and the facetracker is done if a face is detected. This facetracker is the comparision of the output of the neural network of the recognition algorithm when the input is a face image. These outputs (called face descriptors) will be sent to the server to be stored and, if requested, comapared to the descriptors that are on the database (verification process).
+First, there are acquired images from the webcam. When a face is detected, the facetracker is activated. This facetracker is the comparision of two outputs of the recognition algoritm's neural network when the input is a face image. These outputs (called face descriptors) will be sent to the server to be stored and, if requested, comapared to the descriptors that are on the database (verification process).
 If the system is in a registration stage, these descriptors will be stored according to the input read by the NFC Reader or the keyboard.
 
 For more information please look the guide.pdf that is in this repository. 
@@ -36,6 +36,7 @@ In order to test this project, you need to install the following:
 * [Caffe](http://caffe.berkeleyvision.org/install_apt.html)
 
 Then, please download and paste into the folder models/ the following models for the algorithms:
+
 DeepFace:
 * [20170511-185253.pb](https://drive.google.com/file/d/0B5MzpY9kBtDVOTVnU3NIaUdySFE/edit)
 
