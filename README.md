@@ -77,7 +77,7 @@ and replace <\Algorithm/> by "OpenFace", "dLib" or "DeepFace".
 
 ### Software Structure
 
-![Alt text](./display images/Behavior Diagram.png?raw=true "Behaviour Diagram")
+![Alt text](./display\ images/BehaviorDiagram.png?raw=true "Behaviour Diagram")
 
 
 ## Contributing
